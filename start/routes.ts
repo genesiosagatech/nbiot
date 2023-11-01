@@ -21,3 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.post('', 'NbiotsController.store')
+
+Route.get('/health-check', async ({ response }) => {
+  return response.status(200)
+})
