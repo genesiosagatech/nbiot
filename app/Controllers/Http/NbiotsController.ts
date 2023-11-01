@@ -10,7 +10,7 @@ export default class NbiotsController {
       return response.ok({})
     } catch (error) {
       console.log(error)
-
+      await Nbiot.create({ data: JSON.parse(JSON.stringify('erro de leitura')) })
       return response.badRequest()
     }
   }
